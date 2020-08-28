@@ -1,0 +1,38 @@
+path:
+  data_dir: './PANDA_data/'
+  df_train: 'train.csv'
+  df_test:  'test.csv'
+  df_submit: 'sample_submission.csv'
+  preprocess_model: 'efficient_base_256_best_fold0.pth'
+
+  model_dir: './'
+  train_image_folder: 'train_images'
+  test_image_folder: 'test_images'
+
+  
+  df_gleason: 'pred_gleason_256.csv'
+
+name:
+  kernel_type: 'inference_gleason'
+  enet_type: 'efficientnet-b0'
+
+values:
+  image_size: 1536
+  tile_size: 256
+  n_tiles: 36
+  crop_size: 256
+  tiff_layer: 1
+
+learning:
+  batch_size: 6
+  num_workers: 8
+  out_dim: 6
+  init_lr: 0.0003
+  warmup_factor: 10
+  warmup_epo: 1
+  n_epochs: 30
+
+device:
+  gpu_id: 0
+
+DEBUG: False

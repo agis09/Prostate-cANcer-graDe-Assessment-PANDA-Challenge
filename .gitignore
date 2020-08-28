@@ -1,0 +1,11 @@
+*__pycache__/
+.ipynb_checkpoints/
+cropped_img/
+EfficientNet-PyTorch/
+efficientnet-weight/
+input/prostate-cancer-grade-assessment/
+kaggle_notebook_output/
+marker-images/
+*.pth
+*.txt
+*.csv

@@ -1,0 +1,31 @@
+path:
+  data_dir: '../input/prostate-cancer-grade-assessment'
+  df_train: 'train.csv'
+  df_test:  'test.csv'
+  df_submit: 'sample_submission.csv'
+  preprocess_model: 'efficient_base_256_best_fold0.pth'
+
+  model_dir: '../input/pretrained'
+  train_image_folder: 'train_images'
+  test_image_folder: 'test_images'
+
+  
+  df_gleason: 'pred_gleason_256.csv'
+
+values:
+  image_size: 1536
+  tile_size: 256
+  n_tiles: 36
+  crop_size: 256
+  tiff_layer: 1
+  max_rescale: 19660800
+
+learning:
+  batch_size: 6
+  num_workers: 8
+  out_dim: 6
+
+device:
+  gpu_id: 0
+
+DEBUG: False

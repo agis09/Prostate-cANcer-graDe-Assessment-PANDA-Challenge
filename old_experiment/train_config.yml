@@ -1,0 +1,37 @@
+path:
+  data_dir: './PANDA_data/'
+  df_train: 'train.csv'
+  df_test:  'test.csv'
+  df_submit: 'sample_submission.csv'
+  df_gleason: 'pred_gleason_256.csv'
+
+  model_dir: './'
+  train_image_folder: 'train_images'
+  test_image_folder: 'test_images'
+
+name:
+  kernel_type: 'train_isup_parallel_with_BN'
+  enet_type: 'efficientnet-b0'
+
+values:
+  fold: 0
+  image_size: 1536
+  tile_size: 256
+  n_tiles: 36
+  crop_size: 256
+  tiff_layer: 1
+
+learning:
+  batch_size: 12
+  num_workers: 12
+  # out_dim: 6
+  out_dim: 5
+  init_lr: 0.0003
+  warmup_factor: 10
+  warmup_epo: 1
+  n_epochs: 50
+
+device:
+  gpu_id: 0
+
+DEBUG: False
